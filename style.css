@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: rgba(86,28,36,1); */
+  background: rgb(86,28,36);
+  background: linear-gradient(90deg, rgba(86,28,36,1) 0%, rgba(109,41,50,1) 37%, rgba(199,167,179,1) 70%, rgba(232,216,196,1) 100%); 
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  height: 95%;
+  width: 600px;
+  background: #ffffff9e;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+header{
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    color: #561c24;
+}
+
+.penguin_groomed{
+    width: 100px;
+    height: 100px;
+}
+
+.penguin_groomed img{
+    width: 100%;
+    display: block;
+}
+
+.invitation_text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    height: auto;
+    position: absolute;
+    background-color: #6d2932;
+    top: 55%;
+    transform: translateY(-50%);
+    padding: 2em 0;
+    z-index: 1;
+    color: #e8d8c4;
+}
+
+.invitation_text p{
+    text-align: justify;
+    width: 350px;
+}
+
+.invitation_text span{
+    display: flex;
+    align-items: center;
+}
+
+.penguin_spy{
+    width: 50px;
+    height: 50px;
+}
+
+.penguin_spy img{
+    width: 100%;
+    display: block;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+footer .disc{
+    width: 60px;
+    height: 60px;
+    background: url("./img/disc.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    animation:spin 4s linear infinite;
+    margin: 0 2em;
+    cursor: pointer;
+}
+
+.song_details{
+    width: 70%;
+    height: 60px;
+    border: 2px solid #c7b7a3;
+}
+
+.song_details p{
+    margin: 0.75em 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bar{
+    display: block;
+    width: 75%;
+    height: 5px;
+    margin: 0em 1em;
+    border-radius: 5px;
+    background: #e8d8c4;
+}
+
+.progress{
+    width: 50%;
+    height: 100%;
+    background: #561c24;
+}
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    } 
+}
+
+@media screen and (max-width: 430px) {
+    header{
+        top: 5%;
+    }
+
+    .invitation_text{
+        top: 50%;
+    }
+
+    footer{
+        bottom: 2.5%;
+    }
+
+    footer .disc{
+        margin: 0 1em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    header h1{
+        font-size: 2em;
+    }
+
+   .penguin_groomed{
+    width: 75px;
+    height: 75px;
+   }
+}
